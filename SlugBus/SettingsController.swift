@@ -17,17 +17,17 @@ class SettingsController: UIViewController {
     
     @IBOutlet weak var ProfilePicLabel: UIImageView!
     
-    var name = "Name: "
-    var email = "Email: "
-    var year = "Year: "
-    var major = "Major: "
+    var name: String! = "Dylan Woodbury"
+    var email: String! = "dwoodbur@ucsc.edu"
+    var year: String! = "Junior"
+    var major: String! = "CS: Game Design"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NameLabel.text = name
-        EmailLabel.text = email
-        YearLabel.text = year
-        MajorLabel.text = major
+        NameLabel.text = "Name: " + name
+        EmailLabel.text = "Email: " + email
+        YearLabel.text = "Year: " + year
+        MajorLabel.text = "Major: " + major
         
     }
 

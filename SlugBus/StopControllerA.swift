@@ -76,6 +76,7 @@ class StopControllerA: UIViewController, UITableViewDataSource, UITableViewDeleg
         if(segue.identifier == "routeToStop") {
             var vc: StopControllerB = segue.destinationViewController as StopControllerB
             vc.route = route
+            
         }
     }
     

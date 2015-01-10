@@ -18,6 +18,7 @@
 		59A997E41A611AC200CA2868 /* StopControllerB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A997E31A611AC200CA2868 /* StopControllerB.swift */; };
 		59A997E61A6123A400CA2868 /* RouteStopDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A997E51A6123A400CA2868 /* RouteStopDisplayController.swift */; };
 		59A997E81A61274C00CA2868 /* BusBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A997E71A61274C00CA2868 /* BusBoardController.swift */; };
+		59A997EA1A61B38000CA2868 /* messageBoardCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A997E91A61B38000CA2868 /* messageBoardCustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		59A997E31A611AC200CA2868 /* StopControllerB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StopControllerB.swift; path = ../StopControllerB.swift; sourceTree = "<group>"; };
 		59A997E51A6123A400CA2868 /* RouteStopDisplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteStopDisplayController.swift; sourceTree = "<group>"; };
 		59A997E71A61274C00CA2868 /* BusBoardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusBoardController.swift; sourceTree = "<group>"; };
+		59A997E91A61B38000CA2868 /* messageBoardCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messageBoardCustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				59A997E31A611AC200CA2868 /* StopControllerB.swift */,
 				59A997E51A6123A400CA2868 /* RouteStopDisplayController.swift */,
 				59A997E71A61274C00CA2868 /* BusBoardController.swift */,
+				59A997E91A61B38000CA2868 /* messageBoardCustomCell.swift */,
 				59A997C41A60E90900CA2868 /* Images.xcassets */,
 				59A997C61A60E90900CA2868 /* LaunchScreen.xib */,
 				59A997BB1A60E90900CA2868 /* Supporting Files */,
@@ -234,6 +237,7 @@
 				59A997C01A60E90900CA2868 /* ViewController.swift in Sources */,
 				59A997DE1A610CC400CA2868 /* StopControllerA.swift in Sources */,
 				59A997BE1A60E90900CA2868 /* AppDelegate.swift in Sources */,
+				59A997EA1A61B38000CA2868 /* messageBoardCustomCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

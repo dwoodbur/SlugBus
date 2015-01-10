@@ -8,9 +8,10 @@
 
 import UIKit
 
-class StopControllerB: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class StopControllerB: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var PickerView: UIPickerView!
+    
+    @IBOutlet weak var StopsView: UITableView!
     
     var stops: [String] = ["-Select Route-"]
     
@@ -42,24 +43,31 @@ class StopControllerB: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     }
     
     
-    // MARK: Picker
+    // MARK: TABLEVIEW
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.stops.count;
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return stops.count
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        stop = stops[indexPath.row]
+        
+        self.performSegueWithIdentifier("stopToDisplay", sender: nil)
+        
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return stops[row]
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell:UITableViewCell = self.StopsView.dequeueReusableCellWithIdentifier("routeCell") as UITableViewCell
+        
+        cell.textLabel?.text = self.stops[indexPath.row]
+        
+        return cell
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        stop = stops[row]
-    }
 
+    
+    
     
     // MARK: - Navigation
 
@@ -69,6 +77,7 @@ class StopControllerB: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         // Pass the selected object to the new view controller.
         
         if(segue.identifier == "stopToDisplay") {
+            
             var vc: RouteStopDisplayController = segue.destinationViewController as RouteStopDisplayController
             vc.stop = stop
             vc.route = route
